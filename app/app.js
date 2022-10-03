@@ -1,10 +1,31 @@
+function init() {
+    $("#submit").on("click", function (e){
+        e.preventDefault();
+        let fn = $("#fName").val();
+        let ln = $("#lName").val();
+
+    if(fn == ""){
+        alert("Enter your first name");
+    }  else if(ln == ""){
+        alert("Enter your last name");
+    } else{
+        alert("You have signed in");
+    }
+
+    });
+}
+
 $(document).ready(function() {
-    console.log("ready");
+    init();
 });
 
-$(window).on("load", function(){
-    console.log("loaded");
-    Swal.fire("Any fool can use a computer");
+// $(document).ready(function() {
+//     console.log("ready");
+// });
+
+// $(window).on("load", function(){
+//     console.log("loaded");
+//     Swal.fire("Any fool can use a computer");
     // Swal.fire({
     //     title: '<strong>HTML <u>example</u></strong>',
     //     icon: 'info',
@@ -23,5 +44,5 @@ $(window).on("load", function(){
     //     cancelButtonAriaLabel: 'Thumbs down'
     //   })
     // $(".modal").css("display","none");
-});
+// });
 
